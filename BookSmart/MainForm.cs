@@ -96,9 +96,9 @@ namespace BookSmart
             {
                 var seed = new List<Customer>
                     {
-                        new Customer { Name = "Ion" },
-                        new Customer { Name = "Denisa" },
-                        new Customer { Name = "Mara" }
+                        new Customer { FullName = "Ion" },
+                        new Customer { FullName = "Denisa" },
+                        new Customer { FullName = "Mara" }
                     };
 
                 foreach (var c in seed)
@@ -134,7 +134,7 @@ namespace BookSmart
             }
 
             // Fill UI data
-            cmbCustomer.DataSource = _customers.Select(c => c.Name).ToList();
+            cmbCustomer.DataSource = _customers.Select(c => c.FullName).ToList();
             RefreshBookDropdown();
 
             WriteLine("Loaded data.");
@@ -295,11 +295,11 @@ namespace BookSmart
 
             // Create customer if missing
             var customer = _customers.FirstOrDefault(c =>
-                c.Name.Equals(customerName, StringComparison.OrdinalIgnoreCase));
+                c.FullName.Equals(customerName, StringComparison.OrdinalIgnoreCase));
 
             if (customer == null)
             {
-                customer = new Customer { Name = customerName };
+                customer = new Customer { FullName = customerName };
                 _customers.Add(customer);
                 await storage.AddCustomerAsync(customer);
             }

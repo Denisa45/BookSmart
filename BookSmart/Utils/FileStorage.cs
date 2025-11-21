@@ -74,7 +74,7 @@ namespace BookSmart.Utils
                 result.Add(new Customer
                 {
                     Id = c[0],
-                    Name = c[1],
+                    FullName = c[1],
                 });
             }
             return result;
@@ -86,7 +86,7 @@ namespace BookSmart.Utils
                 customers.Select(c =>
                     string.Join(',',
                         EscapeCsv(c.Id),
-                        EscapeCsv(c.Name) // strings may have commas/quotes
+                        EscapeCsv(c.FullName) // strings may have commas/quotes
                     )
                 )
             );
