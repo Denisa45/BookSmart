@@ -1,0 +1,3 @@
+# BookSmart configuration
+rental_days=7
+fee_per_day=2.5

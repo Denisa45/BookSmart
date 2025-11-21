@@ -1,0 +1,14 @@
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.AssemblyInfoInputs.cache
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.AssemblyInfo.cs
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\bin\Debug\net8.0\BookSmart.Data.deps.json
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\bin\Debug\net8.0\BookSmart.Data.runtimeconfig.json
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\bin\Debug\net8.0\BookSmart.Data.dll
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\bin\Debug\net8.0\BookSmart.Data.pdb
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.dll
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\refint\BookSmart.Data.dll
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.pdb
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.genruntimeconfig.cache
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\ref\BookSmart.Data.dll
