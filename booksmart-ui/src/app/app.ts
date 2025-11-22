@@ -1,27 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { BookService, Book } from './book.service';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.css']
+  standalone: true,
+  templateUrl: './app.html',
+  styleUrls: ['./app.css'],
+  imports: [RouterOutlet]
 })
-export class Appt implements OnInit {
-  books: Book[] = [];
-  loading = true;
-
-  constructor(private bookService: BookService) {}
-
-  ngOnInit(): void {
-    this.bookService.getBooks().subscribe({
-      next: (data) => {
-        this.books = data;
-        this.loading = false;
-      },
-      error: (err) => {
-        console.error('Error loading books: ', err);
-        this.loading = false;
-      }
-    });
-  }
-}
+export class App { }

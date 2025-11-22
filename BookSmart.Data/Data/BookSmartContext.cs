@@ -25,10 +25,46 @@ namespace BookSmart.Data.Data
             }
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            // RENTAL → BOOK relation
+            modelBuilder.Entity<Rental>()
+                .HasOne(r => r.Book)
+                .WithMany()
+                .HasForeignKey(r => r.BookId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // RENTAL → CUSTOMER relation
+            modelBuilder.Entity<Rental>()
+                .HasOne(r => r.Customer)
+                .WithMany()
+                .HasForeignKey(r => r.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Book)
+                .WithMany()
+                .HasForeignKey(o => o.BookId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Order>()
+                .HasOne(o => o.Customer)
+                .WithMany()
+                .HasForeignKey(o => o.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
+            base.OnModelCreating(modelBuilder);
+
+        }
+
+
         public DbSet<Book> Books { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Rental> Rentals { get; set; }
         public DbSet<Order> Orders { get; set; }
+
+
     }
 
 }

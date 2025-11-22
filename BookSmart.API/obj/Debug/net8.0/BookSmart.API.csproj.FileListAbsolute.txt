@@ -129,10 +129,10 @@ C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\stat
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\BookSmar.5DB3BCA9.Up2Date
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\BookSmart.API.dll
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\refint\BookSmart.API.dll
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\BookSmart.API.pdb
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\BookSmart.API.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\ref\BookSmart.API.dll
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.API\obj\Debug\net8.0\BookSmart.API.sourcelink.json

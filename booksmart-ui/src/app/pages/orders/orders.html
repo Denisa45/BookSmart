@@ -1,0 +1,22 @@
+<h2>Orders</h2>
+
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th>Book</th>
+      <th>Customer</th>
+      <th>Qty</th>
+      <th>Ordered At</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let o of orders">
+      <td>{{ o.bookTitle }}</td>
+      <td>{{ o.customerName }}</td>
+      <td>{{ o.quantity }}</td>
+      <td>{{ o.orderedAt | date }}</td>
+      <td>{{ o.status }}</td>
+    </tr>
+  </tbody>
+</table>

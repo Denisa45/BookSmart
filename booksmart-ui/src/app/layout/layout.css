@@ -1,0 +1,15 @@
+.app-container {
+  height: 100vh;
+}
+
+.sidebar {
+  width: 220px;
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,20 @@
+<h2 class="mt-3">Books</h2>
+
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+           <th>Title</th>
+           <th>Author</th>
+           <th>Total Copies</th>
+           <th>Available</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let b of books">
+            <td>{{ b.Title }}</td>
+            <td>{{ b.Author }}</td>
+            <td>{{ b.TotalCopies }}</td>
+            <td>{{ b.AvailableCopies }}</td>
+        </tr>
+    </tbody>
+</table>

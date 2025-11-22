@@ -1,0 +1,30 @@
+<div class="app-container d-flex">
+
+  <!-- Sidebar -->
+  <nav class="sidebar bg-dark text-white p-3">
+    <h3 class="text-center mb-4">BookSmart</h3>
+
+    <ul class="nav flex-column">
+      <li class="nav-item mb-2">
+        <a routerLink="/books" class="nav-link text-white">📘 Books</a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a routerLink="/customers" class="nav-link text-white">👤 Customers</a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a routerLink="/orders" class="nav-link text-white">📦 Orders</a>
+      </li>
+
+      <li class="nav-item mb-2">
+        <a routerLink="/rentals" class="nav-link text-white">📚 Rentals</a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Main content -->
+  <main class="content flex-grow-1 p-4">
+    <router-outlet></router-outlet>
+  </main>
+</div>

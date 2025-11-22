@@ -1,7 +1,18 @@
 import { Routes } from '@angular/router';
-import { Books } from './books/books';
+import { Customers } from './pages/customers/customers';
+import { Orders } from './pages/orders/orders';
+import { Rentals } from './pages/rentals/rentals';
+import { Books } from './pages/books/books';
+import { LayoutComponent } from './layout/layout';
 
 export const routes: Routes = [
-    {path:'books', component: Books},
-    {path:'', redirectTo:'books', pathMatch:'full'}
+    { path: '', 
+        component:LayoutComponent,
+        children:[
+    {path:'books', component:Books},
+    {path:"customers", component:Customers},
+    {path:"orders", component:Orders},
+    {path:"rentals",component:Rentals},
+    {path:"",redirectTo:"/books",pathMatch:'full'}
+        ]}
 ];

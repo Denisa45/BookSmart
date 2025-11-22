@@ -1,20 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookSmart.Data.Models
+﻿namespace BookSmart.Data.Models
 {
     public class Order
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString("N"); //unique id string
+        public string Id { get; set; } = Guid.NewGuid().ToString("N");
+
+        // RELATIONAL FIELDS
+        public string BookId { get; set; } = "";
+        public Book? Book { get; set; }
+
+        public string CustomerId { get; set; } = "";
+        public Customer? Customer { get; set; }
+
+        // LEGACY FIELDS (WinForms compatibility)
         public string BookTitle { get; set; } = "";
         public string CustomerName { get; set; } = "";
-        public DateTime OrderedAt { get; set; }
 
+        // ORDER DATA
+        public int Quantity { get; set; }
+        public DateTime OrderedAt { get; set; } = DateTime.UtcNow;
         public DateTime EstimatedDelivery { get; set; }
 
-        public string Status { get; set; } = "Pending";  // Pending / Arrived / Cancelled
+        // Status: Pending / Arrived / Cancelled
+        public string Status { get; set; } = "Pending";
     }
 }

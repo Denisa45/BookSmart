@@ -43,14 +43,18 @@ namespace BookSmart.Data.Migrations
 
             modelBuilder.Entity("BookSmart.Data.Models.Customer", b =>
                 {
-                    b.Property<string>("ID")
+                    b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.HasKey("ID");
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
 
                     b.ToTable("Customers");
                 });
@@ -60,7 +64,15 @@ namespace BookSmart.Data.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("BookId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("BookTitle")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CustomerId")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -74,11 +86,18 @@ namespace BookSmart.Data.Migrations
                     b.Property<DateTime>("OrderedAt")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Status")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Orders");
                 });
@@ -93,6 +112,10 @@ namespace BookSmart.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("BookTitle")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("CustomerId")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -113,7 +136,28 @@ namespace BookSmart.Data.Migrations
 
                     b.HasIndex("BookId");
 
+                    b.HasIndex("CustomerId");
+
                     b.ToTable("Rentals");
+                });
+
+            modelBuilder.Entity("BookSmart.Data.Models.Order", b =>
+                {
+                    b.HasOne("BookSmart.Data.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BookSmart.Data.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("BookSmart.Data.Models.Rental", b =>
@@ -121,10 +165,18 @@ namespace BookSmart.Data.Migrations
                     b.HasOne("BookSmart.Data.Models.Book", "Book")
                         .WithMany()
                         .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BookSmart.Data.Models.Customer", "Customer")
+                        .WithMany()
+                        .HasForeignKey("CustomerId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Book");
+
+                    b.Navigation("Customer");
                 });
 #pragma warning restore 612, 618
         }

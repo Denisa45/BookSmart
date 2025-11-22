@@ -1,0 +1,16 @@
+<h2 class="mt-3">Customers</h2>
+
+<table class="table table-striped mt-3">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of customers">
+      <td>{{ c.fullName }}</td>
+      <td>{{ c.email }}</td>
+    </tr>
+  </tbody>
+</table>

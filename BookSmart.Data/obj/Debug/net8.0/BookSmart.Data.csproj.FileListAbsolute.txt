@@ -12,3 +12,4 @@ C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\ref
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.pdb
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.genruntimeconfig.cache
 C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\ref\BookSmart.Data.dll
+C:\Users\DELL\Desktop\Facultate\FCPL\Project\BookSmart.Data\obj\Debug\net8.0\BookSmart.Data.sourcelink.json
